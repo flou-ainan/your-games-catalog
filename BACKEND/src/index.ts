@@ -1,8 +1,8 @@
-import express, {Request, Response} from "express";
+import express, {Express ,Request, Response} from "express";
 import routes from "./routes";
 
-const app =  express()
-const PORT = process.env.PORT || 3005
+const app : Express =  express()
+const PORT : any = process.env.PORT || 3005
 
 app.listen(PORT)
 

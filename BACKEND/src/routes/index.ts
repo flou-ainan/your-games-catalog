@@ -2,7 +2,7 @@ import { Router } from "express";
 import userRoutes from "./user";
 
 
-const routes = Router()
+const routes : Router = Router()
 
 routes.use("/user",userRoutes)
 

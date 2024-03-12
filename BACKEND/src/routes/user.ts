@@ -4,7 +4,7 @@ import handleUserRegister from "../controllers/userRegister"
 import handleUserEdit from "../controllers/userEdit"
 import handleUserDelete from "../controllers/userDelete"
 
-const userRoutes = Router()
+const userRoutes : Router = Router()
 
 
 userRoutes.post('/login', handleUserLogin)
