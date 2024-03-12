@@ -1,6 +1,6 @@
 [`⬅ BACK `](../)
 # Still in production
-For while enjoy good drafts of a project beginning 😉 
+For while enjoy nice drafts of a project in the beginning 😉 
 
 
 API REST MADE WITH NODE.js AND EXPRESS

@@ -3,17 +3,17 @@ RESTful API for Your Games Catalog project
 ![Restfull API diagram](./DOCS/images/restfull-API.png)
 
 # Its the beginning
-Hi there, im Flou, a passionate software developer and uts my first time doing this kind of full-stack project.
+Hi there, im Flou, a passionate software developer and its my first time doing this kind of full-stack project.
 
-Im very excited for this project and here goses som motivations and descriptions.
+I'm very excited for this project and here goes some motivations and descriptions.
 
 ## Motivation
-Im already a frontend developer, but im really a software developer, that was the idea whean I signed up for the University, so I decided to make a project tha could cover from database and server to client.
+I'm already a frontend developer, but actually I'm a software developer, that was the idea whean I signed up for the University. So I decided to make a project that could cover from database and server to client.(but this repository will cover only the backend part of it, at least that is my plan right now)
 
 ## The Project
 So this is an RESTful API for a new public Games Catalog based on this previous project [My Games Catalog](https://github.com/flou-ainan/my-games-catalog?tab=readme-ov-file#my-games-catalog) that lacks a backend.
 
-The idea here is to make it the simplest way possible but includin key features as register, login and persistent data.
+The idea here is to make it the simplest way possible but includind key features as register, login and persistent data.
 
 ## Features
 #### User Login and Registration
