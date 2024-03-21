@@ -6,7 +6,6 @@ import handleUserDelete from "../controllers/userDelete"
 
 const userRoutes : Router = Router()
 
-
 userRoutes.post('/login', handleUserLogin)
 userRoutes.post('/register', handleUserRegister)
 userRoutes.patch('/edit', handleUserEdit)
