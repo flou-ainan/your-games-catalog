@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import User,{userSchema} from "../model/user"
+import User,{userSchema} from "../../model/user"
 import jwt from "jsonwebtoken"
 
 //handle user login attempts

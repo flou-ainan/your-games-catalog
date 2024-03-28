@@ -1,4 +1,5 @@
-import {Schema, model} from "mongoose";
+import { Schema, model } from "mongoose";
+import { gameType } from "./game";
 
 export type userType = {
     username: string,
@@ -26,6 +27,10 @@ const userSchema:Schema = new Schema({
     role:{
         default: "USER",
         type: String
+    },
+    games:{
+        type: Array<gameType>,
+        default: []
     }
 })
 

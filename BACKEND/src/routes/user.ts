@@ -1,8 +1,8 @@
 import { Router } from "express";
-import handleUserLogin from "../controllers/userLogin"
-import handleUserRegister from "../controllers/userRegister"
-import handleUserEdit from "../controllers/userEdit"
-import handleUserDelete from "../controllers/userDelete"
+import handleUserLogin from "../controllers/user/userLogin"
+import handleUserRegister from "../controllers/user/userRegister"
+import handleUserEdit from "../controllers/user/userEdit"
+import handleUserDelete from "../controllers/user/userDelete"
 
 const userRoutes : Router = Router()
 

@@ -1,9 +1,10 @@
 import express, {Express ,Request, Response} from "express";
 import routes from "./routes";
 import { json } from "body-parser";
-import errorHandler from "./middleware/errorHandler"
 import mongoose, { ConnectOptions } from "mongoose"
 import * as dotenv from 'dotenv'
+
+/* DEBUGGER */ import script from "./debuggerScript"
 
 dotenv.config({path:__dirname+"/../.env"})
 const env = process.env
@@ -23,3 +24,8 @@ try{
 }catch(err){
     console.log("error connecting with database: \n"+err)
 }
+
+script() // debugging script, should run only in development
+
+// fuzzy search article
+// https://dev.to/briansw/implement-fuzzy-text-search-with-mongoose-1ae1

@@ -1,5 +1,5 @@
 import { Request, Response} from "express";
-import User from "../model/user";
+import User from "../../model/user";
 import jwt from "jsonwebtoken"
 
 
@@ -17,7 +17,7 @@ export default async function userRegisterController(req: Request, res: Response
                 username:username,
                 password:password
             })
-            console.log(user)
+            console.log("from user register:\n" +user)
             //  user created successfully
             let hash = process.env.SECRET_HASH as string
             const token = jwt.sign(JSON.stringify(user), hash)
