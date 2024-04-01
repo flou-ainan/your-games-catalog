@@ -8,7 +8,7 @@ import filterUserForToken from "../../helpers/filterUserForToken";
 //handle user registration attempts
 export default async function userRegisterController(req: Request, res: Response){
     // FILTER EMPTY BODY REQUESTS
-    if (!(req.body.username && req.body.password)) res.status(400).send("Invalid os Missing Data")
+    if (!(req.body.username && req.body.password)) return res.status(400).send({message: "Invalid os Missing Data"})
     // EXTRACT REQUEST INFO
     let username:string = req.body.username.toLowerCase()
     let password:string = req.body.password

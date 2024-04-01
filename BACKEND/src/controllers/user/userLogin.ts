@@ -7,7 +7,7 @@ import filterUserForToken from "../../helpers/filterUserForToken";
 //handle user login attempts
 export default async function userLoginController(req: Request, res: Response){
     // CHECK FOR MISSING DATA
-    if (!(req.body.username && req.body.password))  res.status(400).send("Invalid os Missing Data")
+    if (!(req.body.username && req.body.password)) return res.status(400).send({message: "Invalid os Missing Data"})
     // EXTRACT REQUEST INFO    
     let givenUsername = req.body.username.toLowerCase()
     let givenPassword = req.body.password

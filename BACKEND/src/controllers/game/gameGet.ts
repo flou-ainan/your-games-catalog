@@ -4,7 +4,7 @@ import { userType } from "../../model/user";
 
 export default async function gameGetController(req: Request, res: Response){
     // FILTER EMPTY BODY REQUESTS
-    if(!req.body.ID){return res.status(400).json({message:"invalid request"})}
+    if(!req.body.ID) return res.status(400).json({message:"invalid request"}) 
     try{ // SEARCH FOR GIVEN GAMEID ON DATABASE
         let data = await Game.findOne({gameId:req.body.ID}).populate("owner").exec()
         let game = {}

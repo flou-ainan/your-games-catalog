@@ -5,7 +5,7 @@ const shortId = require("../../helpers/shortMongoID")
 
 export default async function gameCreateController(req: Request, res: Response) {
     // FILTER MISSING GAME BODY REQUESTS
-    if(!req.body.game){return res.status(400).json({message:"invalid request"})}
+    if(!req.body.game) return res.status(400).json({message:"invalid request"})
         // FILTER ONLY NECESSARY DATA FROM REQUEST
         const game = filterGameData(req.body.game, req.body.user._id)
         // CREATE GAME ON DATABASE
