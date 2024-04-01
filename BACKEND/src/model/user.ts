@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { ObjectId, Schema, model } from "mongoose";
 import { gameType } from "./game";
 
 export type userType = {
@@ -6,7 +6,8 @@ export type userType = {
     password: string,
     createdAt: number,
     role: string,
-    _id: string
+    _id: string,
+    userID: string
 }
 
 const userSchema:Schema = new Schema({
@@ -21,8 +22,8 @@ const userSchema:Schema = new Schema({
         required: true,
     },
     createdAt:{
-        default: Date.now,
-        type: Number
+        default: () => Date.now(),
+        type: Date
     },
     role:{
         default: "USER",
@@ -31,6 +32,15 @@ const userSchema:Schema = new Schema({
     games:{
         type: Array<gameType>,
         default: []
+    },
+    ratedGames:{
+        type: Array<ObjectId>,
+        default:[]
+    },
+    userID:{
+        type: String,
+        unique: true,
+        upperCase: true
     }
 })
 

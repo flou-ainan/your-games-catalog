@@ -10,6 +10,7 @@ export type gameType = {
     gameId: string
     _id: string
     owner: ObjectId
+    ratings: Array<ObjectId>
 }
 
 const gameSchema: Schema = new Schema({
@@ -50,7 +51,7 @@ const gameSchema: Schema = new Schema({
         default: ""
     },
     // set by the gameCreate controller
-    gameId: {
+    gameID: {
         type: String
     },
     // set by gameCreate controller based on sent token

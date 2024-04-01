@@ -3,10 +3,9 @@ import Game, {gameType} from "../../model/game";
 import { userType } from "../../model/user";
 
 export default async function gameGetController(req: Request, res: Response){
+    // FILTER EMPTY BODY REQUESTS
     if(!req.body.ID){return res.status(400).json({message:"invalid request"})}
-
-    // const data = await Game.where("gameId").equals(req.body.ID)
-    try{
+    try{ // SEARCH FOR GIVEN GAMEID ON DATABASE
         let data = await Game.findOne({gameId:req.body.ID}).populate("owner").exec()
         let game = {}
         if (data != null){
@@ -22,11 +21,8 @@ export default async function gameGetController(req: Request, res: Response){
                 owner: owner.username
             }
         }
-
         res.send(game)
     }catch(e){
         res.status(400).send(e)
     }
-
-
 }

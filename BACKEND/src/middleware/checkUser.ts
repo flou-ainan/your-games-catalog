@@ -1,18 +1,14 @@
 import User from "../model/user"
 import { Request, Response, NextFunction } from "express"
 import { userType } from "../model/user"
+import filterUserForToken from "../helpers/filterUserForToken"
 
 // Checks if the given user exists on database
 export default function checkUser(req: Request, res: Response, next: NextFunction) {
     const data = req.body.user as userType
     
     // selects only data important for validation
-    const user = {
-        username: data.username,
-        createdAt: data.createdAt,
-        password: data.password,
-        _id: data._id
-    }
+    const user = filterUserForToken(data)
 
     User.findOne(user)
         .then(user => {
